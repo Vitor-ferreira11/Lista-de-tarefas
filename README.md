@@ -1,35 +1,55 @@
-# 📝 Lista de Tarefas - JavaScript
+📝 Lista de Tarefas com JavaScript
 
-Este é um projeto simples de uma **Lista de Tarefas (To-Do List)** desenvolvido como parte dos meus estudos em **JavaScript**, HTML e CSS. O objetivo principal foi praticar conceitos de manipulação do DOM, eventos e armazenamento de dados no navegador com `localStorage`.
+Este projeto foi desenvolvido como parte dos meus estudos em JavaScript, com o objetivo de praticar e consolidar conhecimentos em:
 
-## 💡 Funcionalidades
+Manipulação do DOM
 
-- Adicionar novas tarefas
-- Excluir tarefas da lista
-- Salvar tarefas automaticamente no navegador
-- Interface limpa, responsiva e fácil de usar
+Eventos
 
-## 🛠 Tecnologias Utilizadas
+Armazenamento local com localStorage
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla JS)
-- LocalStorage
+Estruturação de páginas com HTML e CSS
 
-## 🎯 Objetivo do Projeto
+🚀 Funcionalidades
 
-Este projeto foi criado com foco em aprendizado, e me ajudou a:
-- Praticar a criação de elementos dinamicamente com JavaScript
-- Trabalhar com arrays e funções de forma aplicada
-- Manipular o DOM e lidar com eventos de forma prática
-- Aplicar conceitos de persistência de dados usando o `localStorage`
+✅ Adicionar tarefas em uma lista interativa✅ Visualizar tarefas mesmo após recarregar a página✅ Excluir tarefas individualmente com um clique✅ Interface limpa, responsiva e amigável ao usuário
 
-## 📷 Captura de Tela
+💻 Tecnologias utilizadas
 
-> *(Adicione aqui uma imagem da aplicação pronta, se quiser deixar ainda mais profissional)*
+HTML5
 
-## 🚀 Como Executar
+CSS3
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/Vitor-ferreira11/nome-do-repo
+JavaScript (Vanilla JS)
+
+LocalStorage (nativo do navegador)
+
+📚 Aprendizados
+
+Esse projeto foi fundamental para reforçar meus conhecimentos em programação front-end, com foco em:
+
+Funções e arrays em JavaScript
+
+Criação e manipulação de elementos no DOM
+
+Persistência de dados local no navegador
+
+Organização e boas práticas no código
+
+Todo o código foi desenvolvido por mim, com atenção à estrutura, legibilidade e eficiência.
+
+![image](https://github.com/user-attachments/assets/fd4812ed-5ee5-4a99-9c1b-0143f46d0b9c)
+
+
+
+
+🔗 Acesse o repositório
+
+👉 github.com/Vitor-ferreira11
+
+🙋‍♂️ Sobre mim
+
+Sou estudante e apaixonado por tecnologia e desenvolvimento web. Este projeto faz parte da minha jornada de aprendizado e evolução constante no mundo da programação.
+
+Sinta-se à vontade para explorar, utilizar e deixar feedbacks! 😄
+
