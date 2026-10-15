@@ -1,5 +1,7 @@
 # Lista de tarefas
 
+**[Abrir demonstração](https://vitor-ferreira11-tarefas.cozyseed5.chatgpt.site)**
+
 Projeto educacional em HTML, CSS e JavaScript para adicionar e excluir tarefas com persistência local no navegador.
 
 ## Executar
