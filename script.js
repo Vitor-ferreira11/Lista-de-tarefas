@@ -2,24 +2,31 @@ let listElements = document.querySelector("#app ul");
 let inputElements = document.querySelector("#app input");
 let buttonElements = document.querySelector("#app button");
 
-let tarefas = JSON.parse(localStorage.getItem("@listaTarefas")) || [];
+let tarefas = [];
+try {
+    const dados = JSON.parse(localStorage.getItem('@listaTarefas'));
+    if (Array.isArray(dados)) tarefas = dados.filter(item => typeof item === 'string');
+} catch {
+    // Permite usar a lista mesmo com dados inválidos ou armazenamento indisponível.
+}
 
 function renderTarefas(){
     listElements.innerHTML = "";
 
-    tarefas.map((todo) =>{
+    tarefas.forEach((todo, posicao) =>{
         let liElement = document.createElement ("li");
         let tarefaText = document.createTextNode (todo);
 
-        let linkElement = document.createElement("a");
-        linkElement.setAttribute("href", "#")
-        
+        let linkElement = document.createElement("button");
+        linkElement.type = 'button';
+        linkElement.setAttribute('aria-label', 'Excluir tarefa: ' + todo);
+
         let linkText = document.createTextNode("Excluir");
         linkElement.appendChild(linkText);
 
-        let posicao = tarefas.indexOf(todo);
 
-        linkElement.setAttribute("onclick", `deletarTarefa(${posicao})`)
+
+        linkElement.addEventListener('click', () => deletarTarefa(posicao));
 
         liElement.appendChild(tarefaText);
         liElement.appendChild(linkElement);
@@ -31,21 +38,24 @@ function renderTarefas(){
 renderTarefas();
 
 function adicionarTarefas(){
-    if(inputElements.value === ''){
+    if(inputElements.value.trim() === ''){
         alert('Digite uma tarefa');
         return false;
     }else{
-        let novaTarefa = inputElements.value;
+        let novaTarefa = inputElements.value.trim();
         tarefas.push(novaTarefa);
         inputElements.value = '';
 
         renderTarefas();
         salvarDados();
     }
-       
+
 }
 
 buttonElements.onclick = adicionarTarefas;
+inputElements.addEventListener('keydown', event => {
+    if (event.key === 'Enter') adicionarTarefas();
+});
 
 function deletarTarefa(posicao){
     tarefas.splice(posicao, 1);
@@ -54,5 +64,9 @@ function deletarTarefa(posicao){
 }
 
 function salvarDados(){
-    localStorage.setItem("@listaTarefas", JSON.stringify(tarefas))
+    try {
+        localStorage.setItem('@listaTarefas', JSON.stringify(tarefas));
+    } catch {
+        alert('Não foi possível salvar. As tarefas ficarão disponíveis apenas nesta sessão.');
+    }
 }

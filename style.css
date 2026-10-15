@@ -59,13 +59,13 @@
     align-items: center;
   }
 
-  li a {
-    color: #ff4d4d;
+  li button {
+    background: transparent; color: #c82020;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
   }
 
-  li a:hover {
+  li button:hover {
     text-decoration: underline;
   }

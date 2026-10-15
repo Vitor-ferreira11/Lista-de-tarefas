@@ -1,55 +1,26 @@
-📝 Lista de Tarefas com JavaScript
+# Lista de tarefas
 
-Este projeto foi desenvolvido como parte dos meus estudos em JavaScript, com o objetivo de praticar e consolidar conhecimentos em:
+Projeto educacional em HTML, CSS e JavaScript para adicionar e excluir tarefas com persistência local no navegador.
 
-Manipulação do DOM
+## Executar
 
-Eventos
+Abra `index.html` em um navegador ou sirva a pasta por hospedagem estática. Não há dependências de aplicação nem etapa de compilação.
 
-Armazenamento local com localStorage
+Digite uma tarefa e use Registrar ou Enter. Tarefas com o mesmo texto são permitidas e podem ser excluídas individualmente. Campos vazios ou só com espaços são rejeitados.
 
-Estruturação de páginas com HTML e CSS
+## Dados salvos
 
-🚀 Funcionalidades
+A lista usa a chave `@listaTarefas` no localStorage. Dados inválidos não impedem abrir a página. Se o navegador bloquear a gravação, aparece um aviso e a lista continua apenas na sessão atual. Não há conta, sincronização ou backend.
 
-✅ Adicionar tarefas em uma lista interativa✅ Visualizar tarefas mesmo após recarregar a página✅ Excluir tarefas individualmente com um clique✅ Interface limpa, responsiva e amigável ao usuário
+## Testes
 
-💻 Tecnologias utilizadas
+Com Node.js 22 ou superior, execute `node --test script.test.cjs`. Os três testes usam um DOM simulado e verificam exclusão de duplicados, JSON inválido, entrada pelo teclado, espaços e armazenamento bloqueado. As verificações também rodam no GitHub em PRs e mudanças em main.
 
-HTML5
+## Estrutura
 
-CSS3
+- `index.html`: página e campo rotulado.
+- `style.css`: aparência.
+- `script.js`: renderização, eventos e armazenamento.
+- `script.test.cjs`: regressões do comportamento.
 
-JavaScript (Vanilla JS)
-
-LocalStorage (nativo do navegador)
-
-📚 Aprendizados
-
-Esse projeto foi fundamental para reforçar meus conhecimentos em programação front-end, com foco em:
-
-Funções e arrays em JavaScript
-
-Criação e manipulação de elementos no DOM
-
-Persistência de dados local no navegador
-
-Organização e boas práticas no código
-
-Todo o código foi desenvolvido por mim, com atenção à estrutura, legibilidade e eficiência.
-
-![image](https://github.com/user-attachments/assets/fd4812ed-5ee5-4a99-9c1b-0143f46d0b9c)
-
-
-
-
-🔗 Acesse o repositório
-
-👉 github.com/Vitor-ferreira11
-
-🙋‍♂️ Sobre mim
-
-Sou estudante e apaixonado por tecnologia e desenvolvimento web. Este projeto faz parte da minha jornada de aprendizado e evolução constante no mundo da programação.
-
-Sinta-se à vontade para explorar, utilizar e deixar feedbacks! 😄
-
+A revisão visual em dispositivos diferentes complementa os testes de comportamento.
